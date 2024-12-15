@@ -12,6 +12,9 @@ interface = "Wi-Fi"  # Dinlemek istediğiniz arayüz adını yazın (örneğin: 
 # Trafiği dinle
 print(f"{interface} adaptöründe tüm trafiği dinliyorum... (Ctrl+C ile durdurabilirsiniz)")
 sniff(iface=interface, prn=packet_callback,count=0)
+#Hem UDP paketlerini hem de TCP paketlerini dinlemek için:
+
+
 # from scapy.all import sniff, UDP
 
 # # Paketlerin işlendiği callback fonksiyonu
@@ -27,6 +30,9 @@ sniff(iface=interface, prn=packet_callback,count=0)
 # # UDP trafiğini dinle
 # print(f"{interface} adaptöründe UDP trafiğini dinliyorum... (Ctrl+C ile durdurabilirsiniz)")
 # sniff(iface=interface, filter="udp", prn=packet_callback, count=0)
+#Sadece UDP paketlerini dinlemek için:
+
+
 # from scapy.all import sniff, UDP
 
 # # Paketlerin işlendiği callback fonksiyonu
@@ -42,3 +48,4 @@ sniff(iface=interface, prn=packet_callback,count=0)
 # # Trafiği dinle (UDP hariç)
 # print(f"{interface} adaptöründe UDP hariç tüm trafiği dinliyorum... (Ctrl+C ile durdurabilirsiniz)")
 # sniff(iface=interface, prn=packet_callback, count=0)
+#Sadece TCP paketlerini dinlemek için:
